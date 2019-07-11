@@ -392,26 +392,6 @@ graph evolution which is key to the FETA process.
 }
 
 \frame{
-\frametitle{Usable likelihood}
-\begin{itemize}
-\item Define $l(M(\btheta) | \bg) = \log (L(M(\btheta)| \bg)$.
-\item Because of normalisation problems standard log-likelihood
-maximisation techniques do not work.
-\item Likelihood can be split into operation model and object model
-components.
-\item Let $M_0$ that be the null hypothesis -- all choices are equally likely.
-Let $m$ be the number of choices (* warning -- details here).
-\item Human readable measure is $c_0$ the \alert{per choice likelihood ratio}.
-\end{itemize}
-\begin{block}{Per choice likelihood ratio $c_0$}
-$$
-c_0 = \left [\frac{L(C|F)}{L(C|M_0)} \right]^{1/m}
-= \exp \left[ \frac{l(C|F) - l(C|M_0)}{m} \right]. 
-$$
-\end{block}
-}
-
-\frame{
 \frametitle{Building object models from components}
 \begin{itemize}
 \item Three possible object models have been introduced already.
@@ -434,15 +414,14 @@ Throughout $k$ is a normalising constant such that $\sum_i p_i = 1$
 for all nodes considered.  
 $p_i$ is the probability of picking node
 $i$ (at the stage being considered).
+
+FIXME -- use only models in this presentation
 \begin{itemize}
 \item Random model $M_0 \quad p_i = 1/k$.
 \item Preferential attachment $M_d \quad p_i = d_i /k$.
 \item PFP $M_p(\delta) \quad p_i = d_i^{1+\delta \log_{10} (d_i)}/k$  where $\delta$ is a parameter.
 \item Degree power $M_d(\alpha) \quad p_i = d_i^{\alpha}/k$ where $\alpha$ is a parameter.
 \item Triangle model $M_t \quad p_i =  t_i/k$ where $t_i$ is the triangle count of node $i$.
-\item Singleton model $M_1 \quad p_i = \begin{cases} 1/k & d_i = 1 \\ 0 & \text{otherwise}\end{cases}$.
-\item Doubleton model $M_2 \quad p_i = \begin{cases} 1/k & d_i = 2 \\ 0 & \text{otherwise}\end{cases}$.
-\item Hot model $M_h(n) \quad p_i = \begin{cases} 1/k & \text{node chosen in last $n$ picks} \\ 0 & \text{otherwise}\end{cases}$ where $n$ is a parameter.
 \end{itemize}
 }
 
