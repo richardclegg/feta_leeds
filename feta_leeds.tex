@@ -148,51 +148,7 @@ of the real network.
 \end{block}
 }
 \tikzstyle{edge} = [draw,ultra thick,-]
-\frame{
-\frametitle{Models of graphs -- Erd\H{o}s--R\'{e}nyi (1959)}
-\begin{itemize}
-\item Perhaps the most famous graph model -- nodes are added at random.
-\item With probabilty $p$ two nodes are linked.
-\item Pro: Easy to reason about.
-\item Con: Not a good model for most real-world networks.  
-\item Con: Doesn't say anything about order edges appear.
-\end{itemize}
-\centering{
-\begin{tikzpicture}[remember picture,auto, ultra thick]
-  % Place super peers and connect them
-  \foreach \place/\name in {{(0,-1)/a}, {(4,-1)/b}, {(4,2)/c}, {(0,2)/d},
-           {(-4,0)/e}, {(-4,2)/f}}
-    \node[superpeers] (\name) at \place {};
-  \path <2-> (f) edge (e);
-  \path <3-> (d) edge (c);
-  \path <4-> (a) edge (b);
-  \path <5-> (a) edge (f);
-\end{tikzpicture}
-}
-}
 
-
-\frame{
-\frametitle{Models of graphs -- Scale-free Barab\'asi--Albert (1999)}
-\begin{block}{Scale free networks}
-A scale free network is one where the degree distribution
-follows a power law -- $\Prob{\text{deg} = i} \sim i^{-\alpha}$.  
-\end{block}
-Scale free networks said to include:
-\begin{itemize}
-\item Internet Autonomous System (AS) graph [Faloutsos x 3 INFCOM 1999],
-\item hyperlinks in web pages / wikipedia,
-\item co-authorship/citation networks, and other social networks,
-\item biological networks (protein networks).
-\end{itemize}
-\begin{block}{Preferential attachment}
-Probability of attach to node $i$  proportional to node degree $d_i$.  That is  $p_i \sim 
-d_i$. 
-Leads to scale free network (Barab\'asi--Albert [Science 1999]).
-\end{block}
-}
-
-\frame{
 \frametitle{Many many network models exist}
 \begin{itemize}
 \item Generalised Linear Preference (GLP model) [FIX ME -- correct ref] 
@@ -311,39 +267,9 @@ selected by operation model.
 edges for random selection.
 \item Edges selected by assigning probabilities
 to node pairs.
-\item Object model is main focus of this presentation.
+\item Object model is main focus of this presentation (operation model, for now ``copied").
 \end{itemize}
 \end{block}
-}
-
-\frame{
-\frametitle{FETA Model -- operations model example}
-\begin{itemize}
-\item Results reported here operation model can select from:
-\begin{enumerate}
-\item $\text{NewNodes}(n,m)$ Create a new node and connect it to 
-$n$ new nodes and $m$ existing nodes.
-\item $\text{NewLinks}(n)$ Select an existing node and connect it 
-to $n$ existing nodes.
-\item $\text{NewClique}(n,m)$ Create a clique between $n$ new nodes
-and $m$ existing nodes.
-\end{enumerate}
-\item Example: Original preferential attachment model is:
-$\text{NewNodes}(0,3)$.
-\item Graph evolution is broken down into the addition of cliques,
-new nodes and links between existing nodes.  (There is some ambiguity here).
-\item The full operations model gives the probability of each operation
-(with parameters) at each time step.
-\item More focus needed on the operations model.  Here it is just
-``copied" for real data.
-\end{itemize}
-}
-
-\frame{
-\frametitle{Importance of operations model}
-\begin{center}
-\includegraphics[width=10cm]{link_node_evolve}
-\end{center}
 }
 
 \subsection{Object Model evaluation}
