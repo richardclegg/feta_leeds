@@ -148,8 +148,9 @@ of the real network.
 \end{block}
 }
 \tikzstyle{edge} = [draw,ultra thick,-]
-
+{
 \frametitle{Many many network models exist}
+
 \begin{itemize}
 \item Generalised Linear Preference (GLP model) [FIX ME -- correct ref] 
 \begin{itemize}
@@ -274,25 +275,6 @@ to node pairs.
 
 \subsection{Object Model evaluation}
 
-\frame{
-\frametitle{Object model examples}
-\begin{itemize}
-\item For simplicity consider graphs which evolve using only the 
-$\text{NewNode}(0,1)$ operation -- a new node is created and connects
-to one existing node.
-\item Some function which maps all possible choices
-(of node or link) to a probability.
-\item For example the Preferential Attachment model is
-$p_i = d_i / k$ where:
-\begin{itemize}
-\item $p_i$ is the probability of choosing node $i$.
-\item $d_i$ is the degree of node $i$.
-\item $k$ is a normalising constant such that $\sum_i p_i = 1$.
-\end{itemize}
-\item The PFP model is $p_i = d_i^{1+\delta \log_{10} (d_i)}/k$
-where $\delta$ is a parameter.
-\end{itemize}
-}
 
 \subsection{From model to likelihood}
 
