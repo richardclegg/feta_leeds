@@ -343,12 +343,12 @@ FIXME -- use only models in this presentation
 \begin{itemize}
 \item Perhaps the most convincing test of such a model is its ability to
 recover parameters from a known model.
-\item Build a model with known $M(\btheta)$.  Assume a model structure,
-try to recover $\btheta$.
-\item Two types of parameter -- $\btheta_{\cdot}$ parameters can be recovered
-using Generalised Linear Model fitting.
+\item Create a realisation of a graph with known $M(\btheta)$.  
+\item From this graph try to recover $\btheta$ with maximum likelihood.
+\item Linear parameters of model can be assessed ``in parallel" (model tracks likelihood for a range of answers simultaneously).
 \item Other (non-linear) parameters can be found from ``parameter sweeps" 
 (assessing the likelihood for many values of that parameter).
+\item Look at a measure $c_0$ which gives a ``human readable" likelihood relative to a null model of ``random" connections.
 \end{itemize}
 }
 
@@ -369,14 +369,14 @@ Correct model $M = 0.5 M_2 + 0.5 M_d(0.5)$
 fitted $M= \beta_1 M_2 + (1-\beta_1) M_d(\alpha)$.
 }
 
-\frame{
-\frametitle{Sweep two parameters (10,000 link network)}
-\begin{center}
-\includegraphics[width=8cm]{art2_data} \\
-Correct model $M = 0.5M_p(0.05)+0.5M_t$ fitted 
-$M= \beta_1 M_p(d)+(1- \beta_1)M_t$ 
-\end{center}
-}
+%\frame{
+%\frametitle{Sweep two parameters (10,000 link network)}
+%\begin{center}
+%\includegraphics[width=8cm]{art2_data} \\
+%Correct model $M = 0.5M_p(0.05)+0.5M_t$ fitted 
+%$M= \beta_1 M_p(d)+(1- \beta_1)M_t$ 
+%\end{center}
+%}
 
 
 \section{Conclusions}
