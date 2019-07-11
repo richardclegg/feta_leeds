@@ -425,29 +425,6 @@ FIXME -- use only models in this presentation
 \end{itemize}
 }
 
-\frame{
-\frametitle{A GLM approach to optimise $\beta$ parameters}
-\begin{itemize}
-\item Want to automatically fit $\beta_i$ in models of
-form $M= \beta_1 M_1 + \beta_2 M_2 + \cdots$.
-\item Functional form looks temptingly like a generalised linear model.
-\item Let $p_{i,j}$ be the probability model assigns to node $i$ 
-at step $j$.
-\item Cannot fit to $p_{i,j}$ at each stage because probability is
-not directly measureable.
-\item Instead all we know is whether node $i$ was actually selected
-or not at stage $t$.
-\item Let $I_{i,j}$ be
-an indicator variable such that $I_{i,j}$ is one if node $i$ was
-chosen for choice $j$ and zero otherwise.
-\item By definition $\E{I_{i,j}} =  p_{i,j}$.
-\item Therefore, we fit models of the form
-$I_{i,j} = \beta_1 M_1 + \beta_2 M_2 + \cdots$.
-\item Obviously many models of this form can be tried.  Statistical
-significance will reject unnecessary variables.
-\end{itemize}
-}
-
 
 \section {Testing FETA}
 
