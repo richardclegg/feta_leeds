@@ -1,0 +1,116 @@
+Processing events as links for this time 997832931
+Processing events as links for this time 998053900
+Processing events as links for this time 999806164
+Processing events as links for this time 1000145162
+Processing events as links for this time 1000148136
+Max likelihood : 2.9145543730561077
+0.71 Degree
+0.09 Random
+0.2 TriangleClosure
+Processing events as links for this time 1001455440
+Processing events as links for this time 1001520639
+Processing events as links for this time 1002898765
+Processing events as links for this time 1002911263
+Max likelihood : 2.537354840286379
+0.66 Degree
+0.14 Random
+0.2 TriangleClosure
+Processing events as links for this time 1003259709
+Processing events as links for this time 1003370220
+Processing events as links for this time 1003412068
+Processing events as links for this time 1003434911
+Processing events as links for this time 1003508679
+Processing events as links for this time 1003521514
+Processing events as links for this time 1003589456
+Processing events as links for this time 1003850957
+Processing events as links for this time 1003860426
+Processing events as links for this time 1003865173
+Processing events as links for this time 1003942212
+Processing events as links for this time 1003958394
+Processing events as links for this time 1003965152
+Processing events as links for this time 1003980654
+Processing events as links for this time 1004016580
+Processing events as links for this time 1004021163
+Processing events as links for this time 1004029401
+Processing events as links for this time 1004079658
+Processing events as links for this time 1004079659
+Processing events as links for this time 1004086858
+Processing events as links for this time 1004128648
+Processing events as links for this time 1004139925
+Processing events as links for this time 1004371429
+Processing events as links for this time 1004401470
+Max likelihood : 2.838341412099934
+0.65 Degree
+0.14 Random
+0.21 TriangleClosure
+Processing events as links for this time 1005667922
+Processing events as links for this time 1005680116
+Processing events as links for this time 1005785411
+Processing events as links for this time 1005849522
+Processing events as links for this time 1005865770
+Processing events as links for this time 1006094112
+Processing events as links for this time 1006184150
+Processing events as links for this time 1006189712
+Processing events as links for this time 1006206760
+Processing events as links for this time 1006268231
+Processing events as links for this time 1006271879
+Processing events as links for this time 1006281080
+Processing events as links for this time 1006299152
+Processing events as links for this time 1006360466
+Processing events as links for this time 1006364429
+Processing events as links for this time 1006788389
+Processing events as links for this time 1006796686
+Processing events as links for this time 1006810558
+Processing events as links for this time 1006812159
+Processing events as links for this time 1006870764
+Processing events as links for this time 1006874609
+Processing events as links for this time 1006877467
+Processing events as links for this time 1006963040
+Processing events as links for this time 1007023077
+Processing events as links for this time 1007677322
+Max likelihood : 3.7637984649445393
+0.77 Degree
+0.03 Random
+0.2 TriangleClosure
+Processing events as links for this time 1008360681
+Processing events as links for this time 1008774995
+Processing events as links for this time 1008776261
+Processing events as links for this time 1009868434
+Processing events as links for this time 1009986041
+Processing events as links for this time 1010041234
+Processing events as links for this time 1010435707
+Max likelihood : 3.762178725139938
+0.71 Degree
+0.06 Random
+0.23 TriangleClosure
+Processing events as links for this time 1011108763
+Processing events as links for this time 1011277212
+Processing events as links for this time 1011297242
+Processing events as links for this time 1011690044
+Processing events as links for this time 1012412349
+Processing events as links for this time 1012462858
+Processing events as links for this time 1013003682
+Processing events as links for this time 1013028689
+Processing events as links for this time 1013063582
+Max likelihood : 4.735653061463513
+0.68 Degree
+0.01 Random
+0.31 TriangleClosure
+Processing events as links for this time 1013699111
+Max likelihood : 3.4674085871533546
+0.63 Degree
+0.08 Random
+0.29 TriangleClosure
+Processing events as links for this time 1016484780
+Max likelihood : 2.4732422760199344
+0.6 Degree
+0.18 Random
+0.22 TriangleClosure
+Max likelihood : 3.14085208171234
+0.64 Degree
+0.12 Random
+0.24 TriangleClosure
+Max likelihood : 4.959413501953509
+0.56 Degree
+0.08 Random
+0.36 TriangleClosure
