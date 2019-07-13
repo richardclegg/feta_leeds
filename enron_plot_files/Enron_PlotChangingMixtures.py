@@ -44,9 +44,9 @@ fig, ax = plt.subplots()
 x_major_lct = mpl.dates.AutoDateLocator(minticks=2,maxticks=10, interval_multiples=True)
 x_fmt = mpl.dates.AutoDateFormatter(x_major_lct)
 
-ax.fill_between(stamps,0.001,BA,color='blue', alpha=0.7)
-ax.fill_between(stamps,BA,BA + Tri,color='green', alpha=0.7)
-ax.fill_between(stamps,BA+Tri,BA+Rand+Tri, color='red', alpha=0.7)
+ax.fill_between(stamps,0.001,BA,color='blue', alpha=0.7, label='BA')
+ax.fill_between(stamps,BA,BA + Tri,color='green', alpha=0.7, label='Triangle Closure')
+ax.fill_between(stamps,BA+Tri,BA+Rand+Tri, color='red', alpha=0.7, label='Random')
 
 ax.tick_params(axis='x', which='major', labelsize=12)
 ax.tick_params(axis='y', which='major', labelsize=12)
@@ -57,7 +57,11 @@ ax.yaxis.label.set_fontsize(16)
 ax.set_xlabel("Time")
 ax.set_ylabel("Model proportion in best mix")
 
+plt.legend(loc='lower right', fontsize='large')
+
 plt.xticks(rotation=40)
 
 plt.tight_layout()
 plt.show()
+
+fig.savefig("EnronMixtures.pdf", bbox_inches='tight')

@@ -49,3 +49,4 @@ for link in links:
 plt.tight_layout(h_pad=0)
 plt.legend(loc='upper right')
 plt.show()
+fig.savefig("RPBACombined.pdf")

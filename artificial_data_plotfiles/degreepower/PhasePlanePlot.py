@@ -54,4 +54,5 @@ ax.set_xlabel('Degree power exponent \n post-changepoint',fontsize=16, wrap=True
 #plt.title('Detection of changepoint time in degree power models')
 
 plt.tight_layout()
-plt.show()
+plt.show
+fig.savefig('DP_rescaled_heatplot.pdf')

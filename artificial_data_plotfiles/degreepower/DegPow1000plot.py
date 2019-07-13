@@ -62,7 +62,7 @@ for comb in params:
     MLEtable = np.zeros((10,experiments),dtype=float)
 
     for ex in range(experiments):
-        file = "degreepowerchange/degreepower"+comb[0]+"-"+comb[1]+"-1000results"+str(ex)+".dat"
+        file = "degreepower"+comb[0]+"-"+comb[1]+"-1000results"+str(ex)+".dat"
         lines=[]
         with open(file,'r') as f:
             while True:
@@ -93,3 +93,5 @@ ax[1].legend(loc='upper left')
 ax[0].legend(loc='upper left')
 plt.tight_layout()
 plt.show()
+
+fig.savefig("DP1000_diff_markers.pdf")
