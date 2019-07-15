@@ -177,6 +177,8 @@ $\delta$ is a tunable parameter.
 \frame{
 \frametitle{The ``basket of statistics" approach}
 
+
+
 \begin{itemize}
 \item Which model is ``best"?  How do we tune parameters?
 \item Define the current approach the ``basket of statistics" method.
@@ -228,6 +230,12 @@ G_t=g_t,\ldots}$.
 \subsection{FETA approach}
 \frame{
 \frametitle{FETA approach}
+
+
+\begin{block}{FETA}
+Framework for Evolving Topology Analysis
+\end{block}
+
 \begin{center}
 \includegraphics[width=10cm]{feta_process}
 \end{center}
@@ -432,6 +440,13 @@ $$
 }
 
 
+\frame{
+\frametitle{Which changes are easiest to detect?}
+\begin{center}
+\includegraphics[width=0.9\textwidth]{DP_rescaled_heatplot}
+\end{center}
+}
+
 %\frame{
 %\frametitle{Sweep two parameters (10,000 link network)}
 %\begin{center}
@@ -442,6 +457,24 @@ $$
 %}
 
 
+\tikzstyle{big comment} = [text=white, minimum height=0.8cm, rounded corners, align=center]
+
+\frame{
+\frametitle{Changes in real data -- Enron email network analysed as 3 model mixture 10 time periods}
+\centering{
+\begin{tikzpicture}%[show background grid]
+\node<1-> at (0,0){\includegraphics[width=0.85\textwidth]{EnronMixtures}};
+\node<1->[big comment] at (-3,1.3){BA};
+\node<1->[big comment] at (-3,2.2){Tri};
+\node<1->[big comment] at (-3,3){Rand};
+\draw<2-> [dashed, white, thick] (-0.9,3.2) -- (-0.9,-2.5);
+\node<2->[big comment] at (-0.9,0){Enron files\\for bankrupcy};
+\draw<3-> [dashed, white, thick] (2.6,3.2) -- (2.6,-2.5);
+\node<3->[big comment] at (2.6,0){Obstruction charge\\for destroying files};
+\end{tikzpicture}
+}
+}
+
 \section{Conclusions}
 \subsection{Conclusions}
 
@@ -450,8 +483,6 @@ $$
 \begin{itemize}
 \item The likelihood parameters and the null model here provide 
 a rigorous way to assess a potential dynamic model of network evolution.
-\item The likelihood is reflected in improved performance on replicating
-network statistics.
 \item The advantages of this framework are several:
 \begin{enumerate}
 \item Assesses the dynamic history of the data not statistics of
@@ -459,7 +490,8 @@ a snapshot.
 \item Single statistically rigorous estimate of model
 likelihood.
 \item Quicker than growing a network and testing
-statistics (using same codebase).
+statistics.
+\item Models can be mixture and vary in time.
 \end{enumerate}
 \item An exciting new way to test theories about topologies
 if you have the data for it.

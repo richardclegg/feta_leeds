@@ -55,4 +55,4 @@ ax.set_xlabel('Degree power exponent \n post-changepoint',fontsize=16, wrap=True
 
 plt.tight_layout()
 plt.show
-fig.savefig('DP_rescaled_heatplot.pdf')
+plt.savefig('DP_rescaled_heatplot.pdf')

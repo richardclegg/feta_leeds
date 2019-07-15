@@ -57,7 +57,7 @@ ax.yaxis.label.set_fontsize(16)
 ax.set_xlabel("Time")
 ax.set_ylabel("Model proportion in best mix")
 
-plt.legend(loc='lower right', fontsize='large')
+#plt.legend(loc='lower right', fontsize='large')
 
 plt.xticks(rotation=40)
 
