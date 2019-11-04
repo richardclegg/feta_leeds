@@ -153,7 +153,11 @@ of the real network.
 \frametitle{Many many network models exist}
 
 \begin{itemize}
-\item Degree to power model [Krapivsky et al Phys Rev Lett 2000] 
+\item Preferential growth model  [Barab\'asi--Albert Science 1999] 
+\begin{itemize}
+\item Probability of attachment to $i$ is proportional to degree $d_i$, $p_i \sim d_i$.  
+\end{itemize}
+\item Degree--power model [Krapivsky et al Phys Rev Lett 2000] 
 \begin{itemize}
 \item Probability of attachment to $i$ is degree $d_i$ modified by power $p_i \sim  d_i^ {\alpha}$ -- $\alpha$ is tunable parameter.
 \end{itemize}
@@ -216,9 +220,9 @@ of $\bG$.
 \begin{block}{Problem statement --- more precise}
 Given observations of a graph $\bg$ want to:
 \begin{itemize}
-\item Create models which formally specifies $\Prob{G_{t+1} = g_{t+1} | 
+\item Create models which formally specify $\Prob{G_{t+1} = g_{t+1} | 
 G_t=g_t,\ldots}$.
-\item Likelihood is a term in statistics it measures the probability a given data set arose if an explanatory model is true.
+\item Likelihood: measures the probability a given data set arose if an explanatory model is true.
 \item Measure the likelihood of such a model producing $\bg$.
 \item Automatically test many such models.
 \end{itemize}
@@ -228,20 +232,8 @@ G_t=g_t,\ldots}$.
 \section{FETA}
 
 \subsection{FETA approach}
-\frame{
-\frametitle{FETA approach}
 
 
-\begin{block}{FETA}
-Framework for Evolving Topology Analysis
-\end{block}
-
-\begin{center}
-\includegraphics[width=10cm]{feta_process}
-\end{center}
-}
-
-\subsection{A probabilistic model of graph evolution}
 \frame{
 \frametitle{A probabilistic model of graph evolution}
 \begin{itemize}
@@ -257,6 +249,17 @@ in field (can test existing research methods).
 \end{itemize}
 }
 
+\frame{
+\frametitle{FETA approach}
+
+\begin{block}{FETA}
+Framework for Evolving Topology Analysis
+\end{block}
+
+\begin{center}
+\includegraphics[width=10cm]{feta_process}
+\end{center}
+}
 
 \frame{
 \frametitle{The FETA model structure}
@@ -309,6 +312,25 @@ graph evolution which is key to the FETA process.
 }
 
 \frame{
+\frametitle{Object model components}
+Throughout $k$ is a normalising constant such that $\sum_i p_i = 1$
+for all nodes considered.  
+$p_i$ is the probability of picking node
+$i$ (at the stage being considered).
+
+\begin{itemize}
+\item Random model $M_0 \quad p_i = 1/k$.
+\item Preferential attachment $M_d \quad p_i = d_i /k$.
+\item PFP $M_p(\delta) \quad p_i = d_i^{1+\delta \log_{10} (d_i)}/k$  where $\delta$ is a parameter.
+\item Degree power $M_d(\alpha) \quad p_i = d_i^{\alpha}/k$ where $\alpha$ is a parameter.
+\item Triangle model $M_t(N) = 1/k$ if node in neighbourhood of $N$ most recently chosen.
+\item Singleton model $M_1(N) = 1/k$ if node has degree 1 $0$ otherwise.
+\item Doubleton model $M_2(N) = 1/k$ if node has degree 2 $0$ otherwise.
+\end{itemize}
+}
+
+
+\frame{
 \frametitle{Insight: we can build models from components}
 \begin{block}{Unlikely that any one model is the ``whole" truth}
 Can we create new models by ``mixing" existing model components? \\
@@ -324,23 +346,6 @@ $$
 where $0 \leq \beta_i \leq 1$ and $\sum_i \beta_i = 1$.
 \end{itemize}
 }
-
-\frame{
-\frametitle{Object model components}
-Throughout $k$ is a normalising constant such that $\sum_i p_i = 1$
-for all nodes considered.  
-$p_i$ is the probability of picking node
-$i$ (at the stage being considered).
-
-\begin{itemize}
-\item Random model $M_0 \quad p_i = 1/k$.
-\item Preferential attachment $M_d \quad p_i = d_i /k$.
-\item PFP $M_p(\delta) \quad p_i = d_i^{1+\delta \log_{10} (d_i)}/k$  where $\delta$ is a parameter.
-\item Degree power $M_d(\alpha) \quad p_i = d_i^{\alpha}/k$ where $\alpha$ is a parameter.
-\item Triangle model $M_t(N) = 1/k$ if node in neighbourhood of $N$ most recently chosen. 
-\end{itemize}
-}
-
 
 \section {Testing FETA}
 
@@ -365,7 +370,7 @@ recover parameters from a known model.
 \centering{
 \includegraphics[width=10cm]{deltasweep} \\
 }
-PFP model $M= M_d(0.05)$.  Correct answer is $\delta = 0.05$.
+PFP model $M= M_p(0.05)$.  Correct answer is $\delta = 0.05$.
 }
 
 \frame{
@@ -381,14 +386,14 @@ fitted $M= \beta_1 M_2 + (1-\beta_1) M_d(\alpha)$.
 \subsection{Real tests}
 
 \frame{
-\frametitle{Real tests FB data (1)}
+\frametitle{Real tests Facebook data (1)}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{FBright}
 \end{center}
 }
 
 \frame{
-\frametitle{Real tests FB data (2)}
+\frametitle{Real tests Facebook data (2)}
 \begin{center}
 \includegraphics[width=0.9\textwidth]{FBleft}
 \end{center}
@@ -442,18 +447,20 @@ $$
 
 \subsection{Finding the change point}
 
-\frame{
-\frametitle{Finding the change point -- 10000 node experiment}
-\begin{center}
-\includegraphics[width=0.9\textwidth]{DP10000_diff_markers}
-\end{center}
-}
 
 
 \frame{
 \frametitle{Finding the change point -- 1000 node experiment}
 \begin{center}
-\includegraphics[width=0.9\textwidth]{DP1000_diff_markers}
+\includegraphics[height=0.8\textheight]{DP1000_diff_markers}
+\end{center}
+}
+
+
+\frame{
+\frametitle{Finding the change point -- 10000 node experiment}
+\begin{center}
+\includegraphics[height=0.8\textheight]{DP10000_diff_markers}
 \end{center}
 }
 
@@ -461,7 +468,7 @@ $$
 \frame{
 \frametitle{Which changes are easiest to detect?}
 \begin{center}
-\includegraphics[width=0.9\textwidth]{DP_rescaled_heatplot}
+\includegraphics[height=0.9\textheight]{DP_rescaled_heatplot}
 \end{center}
 }
 
@@ -509,8 +516,9 @@ a snapshot.
 likelihood.
 \item Quicker than growing a network and testing
 statistics.
-\item Models can be mixture and vary in time.
+\item Models can be mixture of existing models and vary in time.
 \end{enumerate}
+\item Moving from network models based in physics to network models based in statistics.
 \item An exciting new way to test theories about topologies
 if you have the data for it.
 \end{itemize}
